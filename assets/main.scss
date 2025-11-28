@@ -1,0 +1,223 @@
+---
+---
+
+@import "minima";
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #070b16;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel-strong: rgba(255, 255, 255, 0.08);
+  --text: #e7ecf5;
+  --muted: #9aa7c1;
+  --accent: #7af0c0;
+  --accent-strong: #63d1e6;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 25px 80px rgba(6, 10, 25, 0.6);
+}
+
+body {
+  font-family: "Space Grotesk", "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(900px circle at 10% 20%, rgba(122, 240, 192, 0.07), transparent 45%),
+    radial-gradient(700px circle at 90% 10%, rgba(99, 209, 230, 0.08), transparent 40%),
+    radial-gradient(1000px circle at 50% 100%, rgba(255, 255, 255, 0.05), transparent 55%),
+    var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-strong);
+  text-shadow: 0 0 12px rgba(122, 240, 192, 0.35);
+}
+
+.site-header {
+  background: rgba(7, 11, 22, 0.5);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+}
+
+.site-title,
+.site-title:visited {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .page-link {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.site-nav .page-link:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.site-nav .page-link:hover {
+  color: var(--accent);
+}
+
+.page-content {
+  padding: 3rem 0 5rem;
+}
+
+.wrapper {
+  max-width: 960px;
+}
+
+.hero {
+  position: relative;
+  padding: 3.5rem 3rem;
+  margin: 0 0 2.5rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(122, 240, 192, 0.08), rgba(99, 209, 230, 0.06));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(122, 240, 192, 0.11), transparent 45%);
+  filter: blur(60px);
+  opacity: 0.9;
+}
+
+.hero h1 {
+  position: relative;
+  margin: 0 0 0.75rem;
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+  z-index: 1;
+}
+
+.hero p {
+  position: relative;
+  margin: 0;
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--muted);
+  z-index: 1;
+}
+
+.hero .badge-row {
+  position: relative;
+  display: inline-flex;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  z-index: 1;
+}
+
+.badge {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+
+.post-list > li {
+  list-style: none;
+  margin: 0 0 1.2rem;
+  padding: 1.25rem 1.4rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-list > li:hover {
+  transform: translateY(-4px);
+  border-color: rgba(122, 240, 192, 0.5);
+  box-shadow: 0 18px 40px rgba(6, 10, 25, 0.55);
+}
+
+.post-link {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.post-excerpt {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.post-content p {
+  color: #dce3ef;
+  line-height: 1.7;
+}
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--panel-strong);
+  padding: 0.8rem 1rem;
+  color: var(--muted);
+}
+
+code {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.35rem;
+  border-radius: 6px;
+}
+
+pre {
+  background: #0d1226;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+pre code {
+  background: transparent;
+}
+
+.footer-col-wrapper {
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 2.6rem 1.8rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    padding: 0 1.25rem;
+  }
+}
