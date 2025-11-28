@@ -1,3 +1,7 @@
 theme: minima
-title: My Blog
-description: Technical notes
+title: Mohammad Khosravi
+description: Notes on building reliable systems, APIs, and tooling.
+show_excerpts: true
+
+minima:
+  skin: dark
